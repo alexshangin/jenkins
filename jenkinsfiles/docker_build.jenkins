@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker/toolbox') {
-                	ssh root@ubuntu22 'sh docker build \-t alexshangin\/toolbox\:latest . '
+                	sh 'docker build -t alexshangin/toolbox:latest . '
                 }
             }
         }
